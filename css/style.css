@@ -1233,7 +1233,8 @@ blockquote::before{
 .bg {
     color: #fff;
     overflow: hidden;
-    position: relative;
+	position: relative;
+	background-color: #FFFFFF;
 }
 .bg .content-title {
     color: #fff;
@@ -1425,12 +1426,12 @@ input:focus, textarea:focus {
 
 .footer {
 	background: #1f1f1f none repeat scroll 0 0;
-	color: #fffff;
+	color: #ffffff;
 	padding: 40px 0;
 }
 .footer-icon a {
 	background: rgba(255, 255, 255, 0.05) none repeat scroll 0 0;
-	color: #fffff;
+	color: #ffffff;
 	display: block;
 	height: 30px;
 	line-height: 30px;
