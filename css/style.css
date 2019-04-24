@@ -11,7 +11,6 @@ TABLE OF CONTENTS:
 GENERAL SECTION
 HEADER SECTION
 SLIDER SECTION
-VIDEO BACKGROUND SECTION
 ABOUT SECTION
 TEAM SECTION
 PORTFOLIOS SECTION
@@ -121,7 +120,8 @@ blockquote {
     font-style: italic;
     line-height: 1.5;
     padding: 0 0 0 40px;
-    position: relative;
+	position: relative;
+	
 }
 blockquote::before{
 	content:"\f10e";
@@ -1082,6 +1082,7 @@ blockquote::before{
 	-ms-transform: scale(0, 0);
 	-webkit-transform: scale(0, 0);
 	transform: scale(0, 0);
+	background-color: rgba(0, 0, 0, 0.692);
 }
 .port-ajax:hover .port-inner,.port-box:hover .port-inner {
 	-ms-transform: scale(1, 1);
