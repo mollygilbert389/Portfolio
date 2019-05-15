@@ -61,7 +61,8 @@
 									<li class="current"><a href="#home">Home</a></li>
                                     <li><a href="#works">Works</a></li>
                                     <li><a href="#about">About</a></li>
-									<li><a href="#contact">Contact</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                    <li><a href="https://drive.google.com/file/d/1mdRjV2T3WfLfrK1mHrbnK-lTH6PhDYn8/view?usp=sharing">Resume</a></li>
 									<li>
 								</ul>
 							</div><!--/.menu-box-->
@@ -310,10 +311,10 @@
                         <h3 class="small-title">Me & My skills: <i class="fa"></i></h3>                     
                         <p><strong>I just want to keep opening new boxes.</strong></p>
 
-                        <p>Languages / Frameworks: JavaScript, JQuery, HTML, CSS, SQL, Sequelize, Firebase, Bootstrap, Handlebars, Materialize, Node, React, Express, Mongo</p>
-                        <p>Other Skills: ConnectWise, Klipfolio, MS Office, Trello, LiquidPlanner, QuoteWerks</p>
+                        <p><strong>Languages / Frameworks:</strong> HTML, CSS, JavaScript, JQuery, Handlebars, Node, Express, SQL, Sequelize, Firebase, Bootstrap, Materialize, React, Mongo, Python, DJango, Radium</p>
+                        <p><strong>Other Skills: </strong>ConnectWise, Klipfolio, MS Office, Trello, LiquidPlanner, QuoteWerks, Salesforce,Xero, Heroku, Github</p>
 
-                        <p>Resume Goes Here</p>
+                        <a href="https://drive.google.com/file/d/1mdRjV2T3WfLfrK1mHrbnK-lTH6PhDYn8/view?usp=sharing">Click to see my resume!</a>
                         
                         <div class="spacing20 clearfix"></div>
                          
@@ -363,7 +364,7 @@
 										 <div id="ErrResults"><!-- retrive Error Here --></div>
 										 <div id="MainResult"><!-- retrive response Here --></div>
 										 <div id="MainContent">
-											 <form id="MyContactForm" name="MyContactForm" method="post">
+											 <form method="post" action="contact.php"  enctype="text/plain" id="MyContactForm" name="MyContactForm">
 												 <p class="name">
 												 <input type="text" name="name" id="name" placeholder="Your Name ...">
 												 <label for="name" id="nameLb"><span class="error">*Name Field Required</span></label>
@@ -384,7 +385,7 @@
 												 <label for="message" id="messageLb"><span class="error">*Message Field Required</span></label>
 												 </p>
 												 <div class="clearfix"></div>
-												 <a href="#" class="contact-btn">Send Message</a>
+												 <button id="submit" class="contact-btn" value="Send">Send Message</button>
 											 </form>
 										 </div><!--MainContent-->
 									 </div><!--form-inner-->
@@ -442,7 +443,37 @@
         <script type="text/javascript" src="js/typed.min.js"></script>
         <script type="text/javascript" src="js/animate.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
-     	
+         
+        <script>
+            var form = document.getElementsByTagName('form')[0];
+            form.addEventListener('submit',contact,false);
+            function contact(e) {
+               // Prevent Default Form Submission
+               e.preventDefault();
+         
+               var target = e.target || e.srcElement;
+               var i = 0;
+               var message = '';
+         
+               // Loop Through All Input Fields
+               for(i = 0; i < target.length; ++i) {
+                  // Check to make sure it's a value. Don't need to include Buttons
+                  if(target[i].type != 'text' && target[i].type != 'textarea') {
+                         // Skip to next input since this one doesn't match our rules
+                     continue;
+                  }
+         
+                  // Add Input Name and value followed by a line break
+                  message += target[i].name + ': ' + target[i].value + "\r\n";
+               }
+               // Modify the hidden body input field that is required for the mailto: scheme
+               target.elements["body"].value = message;
+         
+               // Submit the form since we previously stopped it. May cause recursive loop in some browsers? Should research this.
+               this.submit();
+            }
+         </script>
+
 
 	</body>
 </html>
