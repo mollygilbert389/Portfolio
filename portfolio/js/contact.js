@@ -13,14 +13,17 @@
     $('.error').hide(); //Hide error messages 
     $('#MainResult').hide(); //we will hide this right now
     $('#form-wrapper').show(); //show main form
-    $(".contact-btn").on('click', function() { //User clicks on Submit button
-
+    $("#mollySubmit").on('click', function() { //User clicks on Submit button
+        console.log("made it here")
         // Fetch data from input fields.
         var js_name = $("#name").val();
         var js_email = $("#email").val();
         var js_phone = $("#phone").val();
         var js_message = $("#message").val();
-
+        console.log(js_email)
+        console.log(js_phone)
+        console.log(js_message)
+        console.log(js_name)
         // Do a simple validation
         if (js_name == "") {
             $("#nameLb .error").fadeIn('slow').idle(1000).fadeOut('slow'); // If Field is empty, we'll just show error text inside <span> tag for 1 sec idle and then hide it with fade out.
@@ -52,7 +55,7 @@
 
         //let's put all data together
         var myData = 'postName=' + js_name + '&postEmail=' + js_email + '&postPhone=' + js_phone + '&postMessage=' + js_message;
-
+        console.log(myData)
         jQuery.ajax({
             type: "POST",
             url: "contact.php",

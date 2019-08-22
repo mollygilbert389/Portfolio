@@ -57,8 +57,7 @@ if(!$sentMail)
 		header('HTTP/1.1 500 Couldnot send mail! Sorry..'); 
 		exit();
 	}else{
-		echo '<h3>Uh oh! Something went wrong! Please email me directly at msgilbert389@gmail.com</h3>
-		<p>'.$postMessage.'</p>';
+		echo '<h3>Uh oh! Something went wrong! Please email me directly at msgilbert389@gmail.com</h3>';
 	}
 ?>
 
