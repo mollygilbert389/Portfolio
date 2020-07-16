@@ -95,12 +95,12 @@
 		/**
 		 * Instanciate the Google Maps object
 		 */
-		_create: function() {
-			var self = this;
-			this.instance = { 'map': new google.maps.Map(self.el, self.options), 'markers': [], 'overlays': [], 'services': [] };
-			google.maps.event.addListenerOnce(self.instance.map, 'bounds_changed', function() { $(self.el).trigger('init', self.instance.map); });
-			self._call(self.options.callback, self.instance.map);
-		},
+		// _create: function() {
+		// 	var self = this;
+		// 	this.instance = { 'map': new google.maps.Map(self.el, self.options), 'markers': [], 'overlays': [], 'services': [] };
+		// 	google.maps.event.addListenerOnce(self.instance.map, 'bounds_changed', function() { $(self.el).trigger('init', self.instance.map); });
+		// 	self._call(self.options.callback, self.instance.map);
+		// },
 		
 		/**
 		 * Adds a latitude longitude pair to the bounds.

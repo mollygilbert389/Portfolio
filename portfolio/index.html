@@ -335,8 +335,8 @@
                         <h3 class="small-title">Me & My skills: <i class="fa"></i></h3>                     
                         <p><strong>I just want to keep opening new boxes.</strong></p>
 
-                        <p><strong>Languages / Frameworks:</strong> HTML, CSS, JavaScript, JQuery, Handlebars, Node, Express, SQL, Sequelize, Firebase, Bootstrap, Materialize, React, Mongo, Python, DJango, Radium</p>
-                        <p><strong>Other Skills: </strong>ConnectWise, Klipfolio, MS Office, Trello, LiquidPlanner, QuoteWerks, Salesforce,Xero, Heroku, Github</p>
+                        <p><strong>Languages / Frameworks:</strong> JavaScript, Node, React, Mongo, Python, Express, SQL, Sequelize, Firebase, Radium, Handlebars, HTML, CSS, JQuery, Bootstrap, Materialize,</p>
+                        <p><strong>Other Skills: </strong> Heroku, Github, Linux, ConnectWise, Klipfolio, MS Office, Trello, LiquidPlanner, QuoteWerks, Salesforce</p>
 
                         <a href="https://drive.google.com/file/d/1mdRjV2T3WfLfrK1mHrbnK-lTH6PhDYn8/view?usp=sharing">Click to see my resume!</a>
                         
@@ -362,32 +362,38 @@
         	<div class="container">
             	<div class="row">
                 	<div class="col-md-4">
-                    	<div class="bordering animated" data-animated="fadeInUp">
-                            <h2 class="content-title">Contact address</h2>
-                            <p class="sub-title">I'd love to talk more about this.</p>
-                        </div><!--/.bordering-->
-                        <ul class="ctc-list">
-                        	<li>
-                            	<i class="boxs-icon fa fa-building-o"></i> 
-                            	<p>Austin, TX 78724</p>
-                            </li>
-                            <li>
-                            	<i class="boxs-icon fa fa-tty"></i> 
-                            	<p>781.635.8852</p>
-                            </li>
-                            <li>
-                            	<i class="boxs-icon fa fa-envelope-o"></i> 
-                            	<p><a href="#">msgilbert389@gmail.com</a></p>
-                            </li>
-                            <li>
-                            	
-                            	<p><a href="https://drive.google.com/file/d/1mdRjV2T3WfLfrK1mHrbnK-lTH6PhDYn8/view?usp=sharing">Resume <i class="boxs-icon fa fa-file-pdf-o"></i> </a></p>
-                            </li>
-                            <li>
-                            	<p><a href="https://github.com/mollygilbert389">Github<i class="boxs-icon fa fa-github"></i></a></p>
-                            </li>
-                        </ul><!--/ctc-list-->
-                    </div><!--/.col-md-4-->
+                        <div class="contactandIcons">
+                    	<div class="bordering animated contactbox" data-animated="fadeInUp">
+                            <div>
+                                <h2 class="content-title">Contact Information</h2>
+                                <p class="sub-title">I'd love to talk more about programming opportunities.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <ul class="ctc-list">
+                                <li>
+                                    <i class="boxs-icon fa fa-building-o"></i> 
+                                    <p>Austin, TX 78724</p>
+                                </li>
+                                <li>
+                                    <i class="boxs-icon fa fa-tty"></i> 
+                                    <p>781.635.8852</p>
+                                </li>
+                                <li>
+                                    <i class="boxs-icon fa fa-envelope-o"></i> 
+                                    <p><a href="#">msgilbert389@gmail.com</a></p>
+                                </li>
+                                <li>
+                                    
+                                    <p><a href="https://drive.google.com/file/d/1mdRjV2T3WfLfrK1mHrbnK-lTH6PhDYn8/view?usp=sharing">Resume <i class="boxs-icon fa fa-file-pdf-o"></i> </a></p>
+                                </li>
+                                <li>
+                                    <p><a href="https://github.com/mollygilbert389">Github<i class="boxs-icon fa fa-github"></i></a></p>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+                    </div>
                     
                     <div class="col-md-8">
                                 
@@ -396,29 +402,6 @@
 										 <div id="ErrResults"><!-- retrive Error Here --></div>
 										 <div id="MainResult"><!-- retrive response Here --></div>
 										 <div id="MainContent">
-											 <form method="post" action="contact.php"  enctype="text/plain" id="MyContactForm" name="MyContactForm">
-												 <p class="name">
-												 <input type="text" name="name" id="name" placeholder="Your Name ...">
-												 <label for="name" id="nameLb"><span class="error">*Name Field Required</span></label>
-												 </p>
-												 <p>
-												 <input type="email" name="email" id="email" placeholder="Your Email ...">
-												 <label for="email" id="emailLb">
-												 <span class="error error1">*Email Field Required</span> 
-												 <span class="error error2">*Email Not Valid</span>
-												 </label> 
-												 </p>
-												 <p> 
-												 <input type="text" name="phone" id="phone" placeholder="Your Telephone ...">
-												 <label for="phone" id="phoneLb"><span class="error">*Telephone Field Required</span></label>
-												 </p>
-												 <p class="textarea">
-												 <textarea name="message" id="message" placeholder="Your Message ..." rows="5"></textarea>
-												 <label for="message" id="messageLb"><span class="error">*Message Field Required</span></label>
-												 </p>
-												 <div class="clearfix"></div>
-												 <button id="mollySubmit" class="contact-btn" value="Send">Send Message</button>
-											 </form>
 										 </div><!--MainContent-->
 									 </div><!--form-inner-->
 								</div><!--form-wrapper-->
